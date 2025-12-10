@@ -1,7 +1,7 @@
 # Barkflame-Studios
 Website hosting for miniature painting commission portfolio.
 
-// |===================================== Structure ====================================|
+// |================================ Structure ===============================|
 
 HTML & CSS:
 'index.html'   - Landing and pricing page.
