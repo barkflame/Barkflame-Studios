@@ -9,4 +9,4 @@ HTML & CSS:
 'style.css'    - Site style settings.
 
 Hosting:
-Github pages as 'https://Barkflame-Studios.github.io'
+Github pages as 'https://barkflame.github.io/Barkflame-Studios/'
