@@ -1,9 +1,19 @@
+/* |========================================| Imports |========================================| */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+/* |=======================================| Base Setup |======================================| */
 :root {
-  --bg: #f7f7f7;
-  --accent: #c28b00;
-  --text: #222;
-  --card-bg: #fff;
-  --font-main: 'Segoe UI', sans-serif;
+  --bg: #CBA26B;
+  --accent: #5B4636;
+  --text: #000000;
+  --card-bg: #F0E9DF;
+  --font-main: 'Montserrat', sans-serif;
+}
+
+/* Default Font Settings */
+h1, h2, h3, h4, h5, h6, p, a, li {
+  font-family: var(--font-main);
+  color: var(--text);
 }
 
 body {
