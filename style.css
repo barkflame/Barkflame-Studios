@@ -13,42 +13,75 @@
 
 /* Default Font Settings */
 h1, h2, h3, h4, h5, h6, p, a, li {
-  font-family: var(--font-main);
-  color: var(--text);
+  font-family: 'Montserrat', sans-serif;
+  color: #000000;
 }
 
 /* |=====================================| Logo & Header |=====================================| */
 
-.logo {
-  max-height: 100px;
-  width: auto;
-  display: block;
-  margin: 0 auto 1rem;
-}
-
 header {
   background: var(--accent);
-  color: #CBA26B;
-  padding: 1rem;
+  color: white;
+  padding: 1.5rem 1rem;
   text-align: center;
+}
+
+.header-top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+   flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.logo {
+  height: 100px;
+  width: auto;
+}
+
+.separator {
+  width: 2px;
+  height: 60px;
+  background-color: white;
+}
+
+.header-text h1 {
+  font-size: 1.8rem;
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+.header-text h2 {
+  font-size: 0.9rem;
+  margin: 0;
+  letter-spacing: 1px;
+  font-weight: 400;
 }
 
 /* |=======================================| Navigation |======================================| */
 
-nav a {
-  color: #F0E9DF;
-  margin: 0 1rem;
-  text-decoration: none;
-  font-weight: bold;
+nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.8rem;
 }
 
-nav a:hover {
-  color: #5B4636;
+nav a {
+  color: white;
+  margin: 0 0.5rem;
+  text-decoration: none;
+  font-weight: 600;
   padding: 0.3rem 0.6rem;
   border-radius: 6px;
   transition: all 0.3s ease;
 }
 
+nav a:hover {
+  background-color: white;
+  color: #5B4636;
+}
 
 body {
   margin: 0;
@@ -98,4 +131,60 @@ footer {
   padding: 1rem;
   font-size: 0.9rem;
   color: #666;
+}
+
+/* |===================================| Responsive Design |===================================| */
+
+/* For tablets and smaller screens */
+@media (max-width: 768px) {
+  .header-top {
+    flex-direction: column;      /* stack logo + text */
+    gap: 0.5rem;
+  }
+
+  .separator {
+    display: none;               /* remove the line when stacked */
+  }
+
+  .logo {
+    height: 70px;                /* slightly smaller logo */
+  }
+
+  .header-text h1 {
+    font-size: 1.5rem;
+  }
+
+  .header-text h2 {
+    font-size: 0.85rem;
+  }
+}
+
+/* For very small screens (mobile phones) */
+@media (max-width: 480px) {
+  header {
+    padding: 1rem;
+  }
+
+  .logo {
+    height: 60px;
+  }
+
+  .header-text h1 {
+    font-size: 1.3rem;
+  }
+
+  .header-text h2 {
+    font-size: 0.8rem;
+  }
+
+  nav {
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  nav a {
+    display: block;
+    margin: 0.2rem auto;
+    width: fit-content;
+  }
 }
