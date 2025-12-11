@@ -1,15 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
+    <!-- Media Responsive Design -->
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Import Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tab Display -->
+    <link rel="icon" type="image/png" href="Images/favicon.png" sizes="32x32">
     <title>Barkflame Studios | Miniature Commissions</title>
+
+    <!-- CSS Stylesheet -->
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
     <header>
-        <h1>Barkflame Studios</h1>
+        <!-- Header Block -->
+        <div class="header-top">
+            <img src="Images/logo.png" alt="Barkflame Studios Logo" class="logo">
+        <div class="separator"></div>
+            
+        <div class="header-text">
+            <h1>BARKFLAME STUDIOS</h1>
+            <h2>CUSTOM PAINTING | BOARDGAMES | D&D | WARGAMES</h2>
+        </div>
+        </div>
+        
+        <!-- Navigation Bar -->
         <nav>
             <a href="index.html">Home</a>
             <a href="gallery.html">Gallery</a>
@@ -17,31 +39,74 @@
     </header>
 
     <main>
+        <!-- Introductory Blurb -->
         <section>
             <h2>Miniature Painting Commissions</h2>
-            <p>Welcome! I offer hand-painted miniatures for tabletop wargames and collectors. Every model is treated with care and precision, bringing your armies and heroes to life.</p>
+            <p class="multi-line">
+                Welcome!
+
+                At Barkflame Studios, we know the joy of fielding a fully painted army.
+                
+                Our focus is efficiency - fast, reliable miniature painting that gets your models tabletop-ready without breaking your budget.
+                
+                Whether you need a detachment, battalion, or full army, we deliver paint jobs built for play.
+            </p>
         </section>
 
-        <section class="pricing">
-            <h2>Pricing</h2>
-            <p>Pricing varies by size, complexity, and detailing level. Below is a general guide:</p>
-            <ul>
-                <li><strong>Infantry:</strong> from $25 each</li>
-                <li><strong>Heroes / Characters:</strong> from $60 each</li>
-                <li><strong>Large Models / Monsters / Vehicles:</strong> from $100+</li>
-            </ul>
-            <p>All commissions include priming (default black). Bulk or army discounts available.</p>
-    </section>
+        <!-- Pricing Containers -->
+        <section class="pricing-tiers">
+            <div class="tier">
+                <div class="tier-header">INFANTRY</div>
+                <div class="tier-image">
+                    <img src="Images/infantry.jpg" alt="Painted miniature example - infantry">
+                </div>
+                <div class="tier-content">
+                    <h4>Basic Tier</h4>
+                    <ul>
+                        <li>3 Colours</li>
+                        <li>Battle Ready</li>
+                    </ul>
+                    <span class="tier-price">$25+</span>
+                </div>
+            </div>
 
-    <section>
-        <h2>Contact</h2>
-            <p>Email: <a href="mailto:Barkflame@gmail.com">Barkflame@gmail.com</a></p>
+            <div class="tier">
+                <div class="tier-header">CHARACTER</div>
+                <div class="tier-image">
+                    <img src="Images/character.jpg" alt="Painted miniature example - character">
+                </div>
+                <div class="tier-content">
+                    <h4>Tabletop Plus</h4>
+                    <ul>
+                        <li>Basic Tier</li>
+                        <li>Highlights</li>
+                    </ul>
+                    <span class="tier-price">$50+</span>
+                </div>
+            </div>
+
+            <div class="tier">
+                <div class="tier-header">MONSTERS / VEHICLES</div>
+                <div class="tier-image">
+                    <img src="Images/monster-vehicle.jpg" alt="Painted miniature example - vehicle">
+                </div>
+                <div class="tier-content">
+                    <h4>Large Projects</h4>
+                    <ul>
+                        <li>Tabletop Plus</li>
+                        <li>Magnetisation</li>
+                    </ul>
+                    <span class="tier-price">$100+</span>
+                </div>
+            </div>
         </section>
-  </main>
+    </main>
 
-  <footer>
+    <!-- Footer Block-->
+    <footer>
+        <p>Contact: <a href="mailto:Barkflame@gmail.com">Barkflame@gmail.com</a></p>
         <p>© 2025 Barkflame Studios – Miniature Commissions</p>
-  </footer>
+    </footer>
 
 </body>
 </html>

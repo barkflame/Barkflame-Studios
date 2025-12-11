@@ -1,75 +1,281 @@
+/* |=======================================| Base Setup |======================================| */
+
 :root {
-  --bg: #f7f7f7;
-  --accent: #c28b00;
-  --text: #222;
-  --card-bg: #fff;
-  --font-main: 'Segoe UI', sans-serif;
+    /* Colour Pallette */
+    --light: #F0E9DF;
+    --medium: #CBA26B;
+    --dark: #5B4636;
+    --text: #111111;
+
+    /* Fonts & Spacing */
+    --font-main: 'Montserrat', sans-serif;
+    --spacing-small: 0.5rem;
+    --spacing-medium: 1rem;
+    --spacing-large: 2rem;
+
+    /* Border Radius */
+    --radius-small: 6px;
+    --radius-medium: 12px;
+
+    /* Shadows */
+    --shadow-light: 0 2px 6px rgba(0,0,0,0.1);
+    --shadow-hover: 0 4px 12px rgba(0,0,0,0.15);
+
+    /* Transitions */
+    --transition-speed: 0.3s;
+    --transition-ease: ease;
 }
 
-body {
-  margin: 0;
-  font-family: var(--font-main);
-  background: var(--bg);
-  color: var(--text);
-  line-height: 1.6;
-}
+/* |=====================================| Logo & Header |=====================================| */
 
 header {
-  background: var(--accent);
-  color: white;
-  padding: 1rem;
-  text-align: center;
+    background: var(--medium);
+    color: var(--text);
+    padding: var(--spacing-large) var(--spacing-medium);
+    text-align: center;
+}
+
+.header-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-medium);
+    flex-wrap: wrap;
+    margin-bottom: var(--spacing-medium);
+}
+
+.header-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.logo {
+    max-height: 150px;
+    width: auto;
+}
+
+.separator {
+    width: 2px;
+    height: 120px;
+    background-color: var(--dark);
+}
+
+.header-text h1 {
+    font-size: 2rem;
+    margin: 0;
+    letter-spacing: 1px;
+    font-family: var(--font-main);
+}
+
+.header-text h2 {
+    font-size: 1rem;
+    margin: 0;
+    letter-spacing: 1px;
+    font-weight: 400;
+    font-family: var(--font-main);
+}
+
+/* |=======================================| Navigation |======================================| */
+
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: var(--spacing-small);
+    background: var(--medium);
 }
 
 nav a {
-  color: white;
-  margin: 0 1rem;
-  text-decoration: none;
-  font-weight: bold;
+    color: var(--text);
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.3rem var(--spacing-medium);
+    border-radius: var(--radius-small);
+    transition: all var(--transition-speed) var(--transition-ease);
 }
 
 nav a:hover {
-  text-decoration: underline;
+  background-color: var(--dark);
+  color: var(--light);
+}
+
+/* |==========================================| Main |=========================================| */
+
+body {
+    margin: 0;
+    font-family: var(--font-main);
+    background: var(--light);
+    color: var(--text);
 }
 
 main {
-  max-width: 900px;
-  margin: 2rem auto;
-  padding: 0 1rem;
+    max-width: 1000px;
+    margin: var(--spacing-large) auto;
+    padding: var(--spacing-medium);
 }
 
-h1, h2 {
-  color: var(--accent);
+section {
+    max-width: 900px;
+    margin: 0 auto var(--spacing-large);
+    text-align: center;
 }
 
-.pricing {
-  background: var(--card-bg);
-  border-radius: 12px;
-  padding: 1.5rem;
-  margin: 2rem 0;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+.multi-line {
+    white-space: pre-line;
+    margin-bottom: var(--spacing-medium);
 }
+
+/* |=====================================| Pricing Tiers |=====================================| */
+
+.pricing-tiers {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: var(--spacing-large);
+    margin: var(--spacing-large) auto;
+    text-align: center;
+    width: 100%;
+    padding-bottom: var(--spacing-large);
+}
+
+.tier {
+    flex: 0 1 30%;
+    background: var(--light);
+    border-radius: var(--radius-medium);
+    box-shadow: var(--shadow-light);
+    overflow: hidden;
+    transition: all var(--transition-speed) var(--transition-ease);
+    position: relative;
+}
+
+.tier:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+}
+
+/* Top Card Strip */
+.tier-header {
+    background: var(--dark);
+    color: var(--light);
+    padding: var(--spacing-small);
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+/* Image styling */
+.tier-image {
+    position: relative;
+    aspect-ratio: 4/3;
+    width: 100%;
+    overflow: visible;
+    margin: 0 0 var(--spacing-large);
+}
+
+.tier-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Triangle */
+.tier-image::after {
+    content: "";
+    position: absolute; left: 0;
+    width: 100%;
+    height: 50px;
+    background: var(--dark);
+    clip-path: polygon(0 0, 0 20px, 50% 50px, 100% 20px, 100% 0);
+}
+
+/* Card Content */
+.tier-content {
+    padding: var(--spacing-medium);
+}
+
+.tier p, ul, ul li {
+    margin-bottom: var(--spacing-small);
+}
+
+.tier p {
+    font-weight: 600;
+}
+
+.tier ul {
+    list-style: none;
+    padding: 0;
+    margin: var(--spacing-large);
+}
+
+/* Price Badge */
+.tier-price {
+    display: inline-block;
+    background: var(--dark);
+    color: var(--light);
+    padding: var(--spacing-small) var(--spacing-small);
+    width: 100px;
+    border-radius: 20px;
+    font-weight: 600;
+    box-shadow: var(--shadow-light);
+    margin: 0 0 var(--spacing-large);
+}
+
+/* Bottom Card Strip*/
+.tier::after {
+    content: "";
+    position: absolute; bottom: 0; left: 0;
+    width: 100%;
+    height: 25px;
+    background: var(--dark);
+    border-bottom-left-radius: var(--radius-medium);
+    border-bottom-right-radius: var(--radius-medium);
+}
+
+/* |========================================| Gallery |========================================| */
 
 .gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-medium);
+    max-width: 1000px;
+    margin: 0 auto var(--spacing-large);
 }
 
 .gallery img {
-  width: 100%;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-  transition: transform 0.2s ease;
+    width: 100%;
+    height: auto;
+    border-radius: var(--radius-small);
+    box-shadow: var(--shadow-light);
+    transition: all var(--transition-speed) var(--transition-ease);
+    cursor: pointer;
 }
 
 .gallery img:hover {
-  transform: scale(1.03);
+    transform: scale(1.05);
+    box-shadow: var(--shadow-hover);
 }
 
+/* |=========================================| Footer |========================================| */
+
 footer {
-  text-align: center;
-  padding: 1rem;
-  font-size: 0.9rem;
-  color: #666;
+    position: fixed; bottom: 0; left: 0; width: 100%;
+    background: var(--medium);
+    color: var(--text);
+    text-align: center;
+    padding: var(--spacing-small);
+    font-size: 1rem;
+}
+
+footer a {
+    color: var(--text);
+    padding: 0.3rem var(--spacing-medium);
+    border-radius: var(--radius-small);
+    transition: all var(--transition-speed) var(--transition-ease);
+}
+
+footer a:hover {
+    color: var(--light);
+    background: var(--dark);
 }

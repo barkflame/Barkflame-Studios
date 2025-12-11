@@ -1,15 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <!-- Media Responsive Design -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gallery | Barkflame Studios</title>
+
+    <!-- Import Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tab Display -->
+    <link rel="icon" type="image/png" href="Images/favicon.png" sizes="32x32">
+    <title>Barkflame Studios | Gallery</title>
+
+    <!-- CSS Stylesheet -->
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
     <header>
-        <h1>Gallery</h1>
+        <!-- Header Block -->
+        <div class="header-top">
+            <img src="Images/logo.png" alt="Barkflame Studios Logo" class="logo">
+        <div class="separator"></div>
+            
+        <div class="header-text">
+            <h1>BARKFLAME STUDIOS</h1>
+            <h2>CUSTOM PAINTING | BOARDGAMES | D&D | WARGAMES</h2>
+        </div>
+        </div>
+        
+        <!-- Navigation Bar -->
         <nav>
             <a href="index.html">Home</a>
             <a href="gallery.html">Gallery</a>
@@ -17,20 +39,25 @@
     </header>
 
     <main>
-        <section>
-            <h2>Showcase</h2>
-            <p>A selection of recent commissions and personal projects. Click to view full size.</p>
-        </section>
-
+        <!-- Image Links Belong Here-->
         <section class="gallery">
-            <img src="images/mini1.jpg" alt="Painted miniature example 1">
-            <img src="images/mini2.jpg" alt="Painted miniature example 2">
-            <img src="images/mini3.jpg" alt="Painted miniature example 3">
-            <img src="images/mini4.jpg" alt="Painted miniature example 4">
+            <a href="Images/infantry.jpg" target="_blank">
+                <img src="Images/infantry.jpg" alt="Painted miniature example - infantry">
+            </a>
+
+            <a href="Images/character.jpg" target="_blank">
+                <img src="Images/character.jpg" alt="Painted miniature example - character">
+            </a>
+
+            <a href="Images/monster-vehicle.jpg" target="_blank">
+                <img src="Images/monster-vehicle.jpg" alt="Painted miniature example - vehicle">
+            </a>
         </section>
     </main>
 
+    <!-- Footer Block-->
     <footer>
+        <p>Contact: <a href="mailto:Barkflame@gmail.com">Barkflame@gmail.com</a></p>
         <p>© 2025 Barkflame Studios – Miniature Commissions</p>
     </footer>
 
