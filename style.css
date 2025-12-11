@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
 
 /* |=======================================| Base Setup |======================================| */
+
 :root {
   --bg: #CBA26B;
   --accent: #5B4636;
@@ -16,20 +17,23 @@ h1, h2, h3, h4, h5, h6, p, a, li {
   color: var(--text);
 }
 
-body {
-  margin: 0;
-  font-family: var(--font-main);
-  background: var(--bg);
-  color: var(--text);
-  line-height: 1.6;
+/* |=====================================| Logo & Header |=====================================| */
+
+.logo {
+  max-height: 100px;
+  width: auto;
+  display: block;
+  margin: 0 auto 1rem;
 }
 
 header {
   background: var(--accent);
-  color: #F0E9DF;
+  color: #CBA26B;
   padding: 1rem;
   text-align: center;
 }
+
+/* |=======================================| Navigation |======================================| */
 
 nav a {
   color: #F0E9DF;
@@ -39,7 +43,19 @@ nav a {
 }
 
 nav a:hover {
-  text-decoration: underline;
+  color: #5B4636;
+  padding: 0.3rem 0.6rem;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+
+body {
+  margin: 0;
+  font-family: var(--font-main);
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
 }
 
 main {
