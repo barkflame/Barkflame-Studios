@@ -26,13 +26,13 @@ body {
 
 header {
   background: var(--accent);
-  color: white;
+  color: #F0E9DF;
   padding: 1rem;
   text-align: center;
 }
 
 nav a {
-  color: white;
+  color: #F0E9DF;
   margin: 0 1rem;
   text-decoration: none;
   font-weight: bold;
