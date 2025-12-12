@@ -279,3 +279,50 @@ footer a:hover {
     color: var(--light);
     background: var(--dark);
 }
+
+/* |================================| Media Responsive Design |================================| */
+
+@media (max-width: 480px) {
+    .header-text {
+        align-items: center;
+        text-align: center;
+    }
+    .separator {
+        display: none;
+    }
+    nav {
+        flex-direction: column;
+        gap: var(--spacing-small);
+    }
+    .tier-image {
+        aspect-ratio: 3/2;
+    }
+    .header-text h1 {
+        font-size: 1.5rem;
+    }
+    .header-text h2, .tier-header {
+        font-size: 1rem;
+    }
+    .tier-price {
+        width: 25%;
+        max-width: 100px;
+        font-size: 1rem;
+    }
+    .gallery {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .tier {
+        flex: 1 1 100%;
+        margin-bottom: var(--spacing-large);
+    }
+    footer {
+        position: relative;
+        padding: var(--spacing-medium);
+    }
+    main {
+        padding-bottom: calc(var(--spacing-medium) + 50px);
+    }
+}
