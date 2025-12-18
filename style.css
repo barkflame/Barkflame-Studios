@@ -222,6 +222,25 @@ section {
     margin: 0 0 var(--spacing-large);
 }
 
+/* Booking Buttons */
+.contact-button {
+    display: inline-block;
+    margin-top: var(--spacing-small);
+    padding: var(--spacing-small) var(--spacing-medium);
+    background: var(--dark);
+    color: var(--light);
+    border-radius: var(--radius-small);
+    text-decoration: none;
+    font-weight: 600;
+    transition: all var(--transition-speed) var(--transition-ease);
+    margin: 0 0 var(--spacing-large);
+}
+
+.contact-button:hover {
+    background: var(--medium);
+    color: var(--text);
+}
+
 /* Bottom Card Strip*/
 .tier::after {
     content: "";
